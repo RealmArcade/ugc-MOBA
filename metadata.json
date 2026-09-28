@@ -703,7 +703,9 @@
 			"YOffset": 0
 		}
 	],
+	"CustomEnvironmentPresets": [],
 	"CustomItems": [],
+	"CustomProceduralAnimations": [],
 	"CustomProps": [
 		{
 			"Brightness": 0.5,
@@ -1846,9 +1848,11 @@
 	],
 	"CustomUpgrades": [],
 	"CustomVfx": [],
+	"CustomWaterProfiles": [],
 	"CustomWeapons": [],
+	"DefaultEnvironmentPreset": null,
 	"Dependencies": [],
-	"GameBuildNumber": "v0.0.2",
+	"GameBuildNumber": "v0.0.3",
 	"MapProperties": {
 		"Author": null,
 		"CameraBoundsBottom": null,
@@ -1886,6 +1890,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 1.1000001,
 			"Scales": 1
@@ -1912,6 +1917,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.2
@@ -1938,6 +1944,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.2
@@ -1994,6 +2001,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.2
@@ -2002,6 +2010,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 1.3500001,
 			"Scales": 1.5
@@ -2010,6 +2019,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.5
@@ -2018,6 +2028,7 @@
 			"Brightness": 0.46,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0.95000017,
 			"Scales": 1.2
@@ -2026,6 +2037,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0.4,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.5
@@ -2106,6 +2118,7 @@
 			"CollisionCircleRatios": 0.4,
 			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.5
@@ -2169,6 +2182,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 1.3500001,
 			"Scales": 1.5
@@ -2215,6 +2229,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 1.5500002,
 			"Scales": 1.5
@@ -2223,6 +2238,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 1.2000002,
 			"Scales": 1.5
@@ -2231,6 +2247,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1
@@ -2259,6 +2276,7 @@
 			"CollisionCircleRatios": 0,
 			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0.95000017,
 			"Scales": 1.2
@@ -2267,6 +2285,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.2
@@ -2275,6 +2294,7 @@
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
 			"DespillPlayerColor": true,
+			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
 			"Offsets": 0,
 			"Scales": 1.5
@@ -2316,11 +2336,13 @@
 			"Scales": 1
 		}
 	},
+	"TerrainProfiles": [],
 	"decals": {},
 	"icons": {},
 	"license": "https://www.realm-game.com/RealmPlatform_UGC_License_v1.txt",
 	"noise_textures": {},
 	"ribbons": {},
+	"shaders": {},
 	"skyboxes": {},
 	"textures": {
 		"ancient_jungle_mossy_stone.rtex": {
