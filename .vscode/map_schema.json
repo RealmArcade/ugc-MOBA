@@ -3,6 +3,12 @@
   "title": "MapUnitsRegistry",
   "type": "object",
   "properties": {
+    "GameBuildNumber": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
     "MapProperties": {
       "type": "object",
       "properties": {
@@ -151,7 +157,8 @@
     "CustomUpgrades": { "$ref": "#/definitions/CustomUpgrades" },
     "CustomItems": { "$ref": "#/definitions/CustomItems" },
     "Assets": { "$ref": "#/definitions/Assets" },
-    "textures": { "type": "object" }
+    "textures": { "type": "object" },
+    "shaders": { "type": "object" }
   },
   "definitions": {
     "EntityItem": {
@@ -186,8 +193,7 @@
           "CollisionCircle": { "type": "number", "minimum": 0 },
           "Brightness": { "type": "number", "minimum": 0 },
           "Tint": { "type": "string" },
-          "NormalMode": { "type": "string", "enum": ["Original", "Smooth", "Flat"] },
-          "RecalculateNormals": { "type": "boolean" },
+          "DespillPlayerColor": { "type": "boolean" },
           "NormalizeLuminance": { "type": "boolean" },
           "IgnorePlayerColor": { "type": "boolean" },
           "MaxCapacity": { "type": "number", "minimum": 0 },
@@ -482,12 +488,6 @@
     "Assets": {
       "type": "object"
     },
-    "ModelOffsets": { "type": "object" },
-    "ModelCollisionCircleRatios": { "type": "object" },
-    "ModelObstacleRadii": { "type": "object" },
-    "ModelBrightness": { "type": "object" },
-    "ModelColorTint": { "type": "object" },
-    "ModelNormalModes": { "type": "object" },
-    "ModelIgnorePlayerColor": { "type": "object" }
+    "Models": { "type": "object" }
   }
 }

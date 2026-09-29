@@ -1398,7 +1398,7 @@
 			"DespawnShader": null,
 			"DespillPlayerColor": true,
 			"GoldBounty": 200,
-			"IgnorePlayerColor": false,
+			"IgnorePlayerColor": true,
 			"IsHero": true,
 			"MaxHp": 600,
 			"ModelPath": "fantasy_warrior_unit_1.rmesh",
@@ -1499,7 +1499,7 @@
 			"Upgrades": null,
 			"Weapons": null,
 			"XpBounty": 40,
-			"YOffset": 0
+			"YOffset": 1.25
 		},
 		{
 			"Abilities": null,
@@ -1571,7 +1571,7 @@
 			"Upgrades": null,
 			"Weapons": null,
 			"XpBounty": 40,
-			"YOffset": 0
+			"YOffset": 1.1
 		},
 		{
 			"Abilities": null,
@@ -1614,7 +1614,7 @@
 			"DespawnShader": null,
 			"DespillPlayerColor": true,
 			"GoldBounty": 200,
-			"IgnorePlayerColor": false,
+			"IgnorePlayerColor": true,
 			"IsHero": true,
 			"MaxHp": 600,
 			"ModelPath": "orc_warrior_7.rmesh",
@@ -1643,7 +1643,7 @@
 			"Upgrades": null,
 			"Weapons": null,
 			"XpBounty": 100,
-			"YOffset": 0
+			"YOffset": 1.1
 		},
 		{
 			"Abilities": null,
@@ -1915,38 +1915,42 @@
 		},
 		"bell_tower.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.2000002,
 			"Scales": 1.2
 		},
 		"birch_tree.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 2.65,
 			"Scales": 2.75
 		},
 		"bush.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 0.05000015,
 			"Scales": 2.75
 		},
 		"castle_gate_tower.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.3000002,
 			"Scales": 1.2
 		},
 		"cattail_plant.rmesh": {
@@ -1956,7 +1960,7 @@
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 1.4500002,
+			"Offsets": 2.6000001,
 			"Scales": 2.75
 		},
 		"cauldron_prop.rmesh": {
@@ -1989,21 +1993,23 @@
 			"Scales": 1
 		},
 		"crystal_tree.rmesh": {
-			"Brightness": 0.37,
-			"CollisionCircleRatios": 0,
+			"Brightness": 0.38,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 2.6000001,
 			"Scales": 2.75
 		},
 		"fantasy_archway.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.3000002,
 			"Scales": 1.2
 		},
 		"fantasy_castle.rmesh": {
@@ -2017,39 +2023,42 @@
 		},
 		"fantasy_cottage.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.4000002,
 			"Scales": 1.5
 		},
 		"fantasy_tower_1.rmesh": {
 			"Brightness": 0.46,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0.95000017,
+			"Offsets": 1.2000002,
 			"Scales": 1.2
 		},
 		"fantasy_warrior_unit_1.rmesh": {
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0.4,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
-			"IgnorePlayerColor": false,
+			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.2500001,
 			"Scales": 1.5
 		},
 		"fortified_tower.rmesh": {
 			"Brightness": 0.35999998,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
 			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 2.1000001,
+			"Offsets": 1.6000001,
 			"Scales": 1.5
 		},
 		"gold_mine.rmesh": {
@@ -2078,29 +2087,32 @@
 		},
 		"merchant_stall.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.2500001,
 			"Scales": 1.25
 		},
 		"moba_minion_team1.rmesh": {
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0.4,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.2500001,
 			"Scales": 1.5
 		},
 		"moba_minion_team2.rmesh": {
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0.4,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.1000001,
 			"Scales": 1.5
 		},
 		"mossy_rock_ore.rmesh": {
@@ -2118,9 +2130,9 @@
 			"CollisionCircleRatios": 0.4,
 			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
-			"IgnorePlayerColor": false,
+			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.1000001,
 			"Scales": 1.5
 		},
 		"palm_tree.rmesh": {
@@ -2130,7 +2142,7 @@
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 3.15,
+			"Offsets": 2.7000003,
 			"Scales": 2.75
 		},
 		"resource_001.rmesh": {
@@ -2154,6 +2166,7 @@
 		"resource_003.rmesh": {
 			"Brightness": 0.5,
 			"CollisionCircleRatios": 0,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
@@ -2189,11 +2202,12 @@
 		},
 		"skull_totem_prop.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": true,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.2000002,
 			"Scales": 1.25
 		},
 		"spiked_gate.rmesh": {
@@ -2273,30 +2287,32 @@
 		},
 		"timber_framed_house.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
 			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0.95000017,
+			"Offsets": 1.2500001,
 			"Scales": 1.2
 		},
 		"treehouse_structure.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.1500002,
 			"Scales": 1.2
 		},
 		"warrior_armor.rmesh": {
 			"Brightness": 0.5,
-			"CollisionCircleRatios": 0,
+			"CollisionCircleRatios": 0.1,
+			"ColorTint": "#ffffff",
 			"DespillPlayerColor": true,
 			"IgnorePlayerColor": false,
 			"NormalizeLuminance": true,
-			"Offsets": 0,
+			"Offsets": 1.2500001,
 			"Scales": 1.5
 		},
 		"wooden_barrel_prop.rmesh": {
