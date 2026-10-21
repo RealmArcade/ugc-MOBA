@@ -39,9 +39,6 @@
           "Scale": {
             "type": "number"
           },
-          "IsEnemy": {
-            "type": "boolean"
-          },
           "Player": {
             "type": "integer"
           }
@@ -422,6 +419,9 @@
               },
               "CoreColor": {
                 "type": "string"
+              },
+              "ColorMixRatio": {
+                "type": "number"
               },
               "EmissionBoost": {
                 "type": "number"

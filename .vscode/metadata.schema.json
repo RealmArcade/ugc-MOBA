@@ -282,6 +282,30 @@
             "string",
             "null"
           ]
+        },
+        "TestAiPlayerCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "TestRandomizeSlots": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "TestRandomSeed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "MaxTestPlayers": {
+          "type": [
+            "integer",
+            "null"
+          ]
         }
       }
     },
@@ -874,6 +898,18 @@
                   ]
                 }
               },
+              "ShopItems": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
               "Upgrades": {
                 "type": [
                   "array",
@@ -922,11 +958,26 @@
                   "null"
                 ]
               },
+              "ProceduralAnimation": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "EnableProceduralAnimation": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
               "DespawnShader": {
                 "type": [
                   "string",
                   "null"
                 ]
+              },
+              "ConstructionRange": {
+                "type": "number"
               }
             }
           }
@@ -945,6 +996,21 @@
               "null"
             ],
             "properties": {
+              "MaxCapacity": {
+                "type": "number"
+              },
+              "HarvestRate": {
+                "type": "number"
+              },
+              "GrowthRate": {
+                "type": "number"
+              },
+              "MaxWorkers": {
+                "type": "integer"
+              },
+              "Scale": {
+                "type": "number"
+              },
               "TemplateID": {
                 "type": "string"
               },
@@ -971,21 +1037,6 @@
               },
               "VisualMode": {
                 "type": "string"
-              },
-              "MaxCapacity": {
-                "type": "number"
-              },
-              "HarvestRate": {
-                "type": "number"
-              },
-              "GrowthRate": {
-                "type": "number"
-              },
-              "MaxWorkers": {
-                "type": "integer"
-              },
-              "Scale": {
-                "type": "number"
               },
               "YOffset": {
                 "type": "number"
@@ -1043,6 +1094,9 @@
               "null"
             ],
             "properties": {
+              "Scale": {
+                "type": "number"
+              },
               "TemplateID": {
                 "type": "string"
               },
@@ -1069,9 +1123,6 @@
               },
               "VisualMode": {
                 "type": "string"
-              },
-              "Scale": {
-                "type": "number"
               },
               "YOffset": {
                 "type": "number"
@@ -1200,6 +1251,18 @@
               },
               "SummonDuration": {
                 "type": "number"
+              },
+              "GridX": {
+                "type": "integer"
+              },
+              "GridY": {
+                "type": "integer"
+              },
+              "Hotkey": {
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             }
           }
@@ -1265,6 +1328,21 @@
                   "string",
                   "null"
                 ]
+              },
+              "TrajectoryType": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "BoomerangReturnDelay": {
+                "type": "number"
+              },
+              "OrbitRadius": {
+                "type": "number"
+              },
+              "OrbitSpeed": {
+                "type": "number"
               },
               "ArcHeight": {
                 "type": "number"
@@ -1558,6 +1636,12 @@
                   "null"
                 ]
               },
+              "Hotkey": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
               "CostGold": {
                 "type": "number"
               },
@@ -1588,17 +1672,31 @@
                   ]
                 }
               },
-              "MaxHpBonus": {
-                "type": "number"
-              },
-              "DamageBonus": {
-                "type": "number"
-              },
-              "ArmorBonus": {
-                "type": "number"
-              },
-              "SpeedBonus": {
-                "type": "number"
+              "Modifiers": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "StatKey": {
+                      "type": "string"
+                    },
+                    "Type": {
+                      "type": "string"
+                    },
+                    "Value": {
+                      "type": "number"
+                    },
+                    "WASMFunctionName": {
+                      "type": "string"
+                    },
+                    "PerLevelScaling": {
+                      "type": "number"
+                    }
+                  }
+                }
               }
             }
           }
@@ -1666,6 +1764,30 @@
                 }
               },
               "GrantedWeapons": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "GrantedAbilities": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "GrantedUpgrades": {
                 "type": [
                   "array",
                   "null"
@@ -2053,6 +2175,9 @@
               },
               "CoreColor": {
                 "type": "string"
+              },
+              "ColorMixRatio": {
+                "type": "number"
               },
               "EmissionBoost": {
                 "type": "number"
@@ -2487,6 +2612,9 @@
                     "CoreColor": {
                       "type": "string"
                     },
+                    "ColorMixRatio": {
+                      "type": "number"
+                    },
                     "EmissionBoost": {
                       "type": "number"
                     },
@@ -2670,95 +2798,6 @@
         "string",
         "null"
       ]
-    },
-    "Models": {
-      "type": "object",
-      "additionalProperties": {
-        "type": [
-          "object",
-          "null"
-        ],
-        "properties": {
-          "Brightness": {
-            "type": [
-              "number",
-              "null"
-            ]
-          },
-          "CollisionCircleRatios": {
-            "type": [
-              "number",
-              "null"
-            ]
-          },
-          "ColorTint": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "DespillPlayerColor": {
-            "type": [
-              "boolean",
-              "null"
-            ]
-          },
-          "IgnorePlayerColor": {
-            "type": [
-              "boolean",
-              "null"
-            ]
-          },
-          "NormalizeLuminance": {
-            "type": [
-              "boolean",
-              "null"
-            ]
-          },
-          "ObstacleRadii": {
-            "type": [
-              "number",
-              "null"
-            ]
-          },
-          "Offsets": {
-            "type": [
-              "number",
-              "null"
-            ]
-          },
-          "Scales": {
-            "type": [
-              "number",
-              "null"
-            ]
-          },
-          "SpawnShaders": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "DeathShaders": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "ProceduralAnimation": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "EnableProceduralAnimation": {
-            "type": [
-              "boolean",
-              "null"
-            ]
-          }
-        }
-      }
     },
     "textures": {
       "type": "object",
