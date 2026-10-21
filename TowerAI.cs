@@ -5,10 +5,10 @@ using Realm.MapAPI;
 public sealed class TowerAI
 {
     private readonly TowerDefenseConfig _config;
-    private readonly IUnit _tower;
+    private readonly UnitId _tower;
     private float _cooldown;
 
-    public TowerAI(IUnit tower, TowerDefenseConfig config)
+    public TowerAI(UnitId tower, TowerDefenseConfig config)
     {
         _tower = tower;
         _config = config;

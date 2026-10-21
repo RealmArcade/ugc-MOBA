@@ -5,14 +5,14 @@ using Realm.MapAPI;
 public sealed class HeroProgression
 {
     private readonly HeroProgressionConfig _config;
-    private readonly IUnit _hero;
+    private readonly UnitId _hero;
     private readonly HashSet<int> _rewardedDeaths = [];
     private IGameAPI? _api;
     private float _trackedXp;
     private float _trackedGold;
     private bool _attached;
 
-    public HeroProgression(IUnit hero, HeroProgressionConfig config)
+    public HeroProgression(UnitId hero, HeroProgressionConfig config)
     {
         _hero = hero;
         _config = config;
@@ -25,7 +25,7 @@ public sealed class HeroProgression
 
         _attached = true;
         _api = api;
-        _trackedGold = MathF.Max(api.GetPlayerGold(_config.PlayerIndex), _config.MinStartingGold);
+        _trackedGold = MathF.Max(api.GetPlayer(_config.PlayerIndex).Gold, _config.MinStartingGold);
         api.SetPlayerGold(_config.PlayerIndex, _trackedGold);
         try
         {
@@ -45,18 +45,18 @@ public sealed class HeroProgression
 
     public void Update(IGameAPI api, float delta)
     {
-        _trackedGold = api.GetPlayerGold(_config.PlayerIndex);
+        _trackedGold = api.GetPlayer(_config.PlayerIndex).Gold;
         api.SetLeaderboardValue("Gold", $"{(int)_trackedGold}");
     }
 
-    private void HandleUnitDied(IUnit dead, IUnit? killer)
+    private void HandleUnitDied(UnitId dead, UnitId killer)
     {
-        if (_api == null || dead.IsEnemy == _hero.IsEnemy || _hero.IsDead)
+        if (_api == null || !_hero.IsValid || dead.Player == _hero.Player || _hero.IsDead)
             return;
         if (!_rewardedDeaths.Add(dead.UniqueId))
             return;
 
-        _ = killer?.UniqueId;
+        _ = killer.UniqueId;
         var reward = HeroKillReward.AfterKill(_config, _trackedGold, _trackedXp);
         _trackedGold = reward.Gold;
         _trackedXp = reward.Xp;

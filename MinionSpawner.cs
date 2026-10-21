@@ -72,12 +72,12 @@ public sealed class MinionSpawner
             for (var member = 0; member < 3; member++)
             {
                 var offset = new Vector3((member - 1) * SpawnOffset, 0, 0);
-                var unit = api.SpawnUnit(
-                    player == 0 ? "moba_minion_team1" : "moba_minion_team2",
+                var unit = api.GetPlayer(player).SpawnUnit(
+                    player == 0 ? UnitIds.MobaMinionTeam1 : UnitIds.MobaMinionTeam2,
                     spawnStart + offset,
                     player == 1,
                     true);
-                if (unit == null)
+                if (!unit.IsValid)
                 {
                     if (!_reportedSpawnFailure)
                     {
