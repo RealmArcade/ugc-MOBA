@@ -10,6 +10,8 @@ internal static class MapScriptUnits
 
 public class MapScript : IWasmModule
 {
+    private const float BaseSearchRadius = 40f;
+    private const float BaseSearchRadiusSquared = BaseSearchRadius * BaseSearchRadius;
     private static readonly TowerDefenseConfig MobaTowerConfig = new(12f, 20f, 1.25f, "lightning");
     private static readonly HeroProgressionConfig MobaHeroProgression = new(
         xpPerLevel: 100f,
@@ -22,6 +24,8 @@ public class MapScript : IWasmModule
     private readonly List<TowerAI> _towers = [];
     private readonly MinionSpawner _minionSpawner = new();
     private UnitId _hero = UnitId.Invalid;
+    private UnitId _team1Base = UnitId.Invalid;
+    private UnitId _team2Base = UnitId.Invalid;
     private HeroProgression? _progression;
     private bool _gameEnded;
 
@@ -35,7 +39,7 @@ public class MapScript : IWasmModule
 
         SpawnPlayerHero(api);
         _minionSpawner.SpawnInitialWave(api);
-        ConfigureTowers(api);
+        ConfigureMapUnits(api);
         api.SendMessageToPlayer(0, "First minion wave deployed.");
     }
 
@@ -88,39 +92,40 @@ public class MapScript : IWasmModule
         if (_gameEnded)
             return;
 
-        var team1Base = UnitId.Invalid;
-        var team2Base = UnitId.Invalid;
-
-        foreach (var unit in MapScriptUnits.All(api))
-        {
-            if (unit.TemplateID != BuildingIds.IceCastle1 || !unit.IsBuilding || unit.IsDead)
-                continue;
-
-            if (api.IsPositionInCoordinate(unit.Position, "Base_Team1"))
-                team1Base = unit;
-            else if (api.IsPositionInCoordinate(unit.Position, "Base_Team2"))
-                team2Base = unit;
-        }
-
-        if (team1Base.IsValid && team1Base.IsDead)
+        if (_team1Base.IsValid && _team1Base.IsDead)
         {
             _gameEnded = true;
             api.TriggerDefeat();
             return;
         }
 
-        if (team2Base.IsValid && team2Base.IsDead)
+        if (_team2Base.IsValid && _team2Base.IsDead)
         {
             _gameEnded = true;
             api.TriggerVictory();
         }
     }
 
-    private void ConfigureTowers(IGameAPI api)
+    private void ConfigureMapUnits(IGameAPI api)
     {
+        var team1Center = NamedPoints.Center(api, "Base_Team1");
+        var team2Center = NamedPoints.Center(api, "Base_Team2");
+        var team1DistanceSquared = float.MaxValue;
+        var team2DistanceSquared = float.MaxValue;
+
         foreach (var unit in MapScriptUnits.All(api))
         {
-            if (unit.TemplateID != BuildingIds.IceCastle1 || !unit.IsBuilding)
+            if (!unit.IsBuilding)
+                continue;
+
+            var templateId = unit.TemplateID;
+            if (IsBaseTemplate(templateId))
+            {
+                TryClaimBase(unit, team1Center, ref _team1Base, ref team1DistanceSquared);
+                TryClaimBase(unit, team2Center, ref _team2Base, ref team2DistanceSquared);
+            }
+
+            if (templateId != BuildingIds.IceCastle1)
                 continue;
 
             var owner = GetTowerOwner(unit, api);
@@ -129,6 +134,33 @@ public class MapScript : IWasmModule
 
             _towers.Add(new TowerAI(unit, MobaTowerConfig));
         }
+    }
+
+    private static bool IsBaseTemplate(string templateId) =>
+        templateId == BuildingIds.IceCastle1 || templateId == BuildingIds.FantasyCastle;
+
+    private static void TryClaimBase(
+        UnitId unit,
+        Vector3? baseCenter,
+        ref UnitId baseUnit,
+        ref float bestDistanceSquared)
+    {
+        if (baseCenter is not { } center)
+            return;
+
+        var distanceSquared = HorizontalDistanceSquared(unit.Position, center);
+        if (distanceSquared > BaseSearchRadiusSquared || distanceSquared >= bestDistanceSquared)
+            return;
+
+        bestDistanceSquared = distanceSquared;
+        baseUnit = unit;
+    }
+
+    private static float HorizontalDistanceSquared(Vector3 from, Vector3 to)
+    {
+        var dx = from.X - to.X;
+        var dz = from.Z - to.Z;
+        return dx * dx + dz * dz;
     }
 
     private static int GetTowerOwner(UnitId unit, IGameAPI api)
