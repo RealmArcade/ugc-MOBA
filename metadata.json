@@ -35,7 +35,8 @@
     "TestAiPlayerCount": null,
     "TestRandomizeSlots": null,
     "TestRandomSeed": null,
-    "MaxTestPlayers": null
+    "MaxTestPlayers": null,
+    "PlayablePlayerSlots": null
   },
   "Dependencies": [],
   "Templates": {
