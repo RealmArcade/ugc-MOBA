@@ -16,7 +16,7 @@
       "PosX": -67.643616,
       "PosY": 0,
       "PosZ": 68.5598,
-      "RotationY": 74.999985,
+      "RotationY": 74.99998,
       "Scale": 3.2999992,
       "Player": 12
     },
@@ -25,7 +25,7 @@
       "PosX": -94.23036,
       "PosY": 0,
       "PosZ": 68.383934,
-      "RotationY": 179.99992,
+      "RotationY": 179.99991,
       "Scale": 3.2999992,
       "Player": 12
     },
@@ -44,7 +44,7 @@
       "PosY": 0,
       "PosZ": 79.856926,
       "RotationY": 120,
-      "Scale": 3.2999992,
+      "Scale": 3.2999995,
       "Player": 12
     },
     {
@@ -70,7 +70,7 @@
       "PosX": 24.970709,
       "PosY": 0,
       "PosZ": -92.56574,
-      "RotationY": 270,
+      "RotationY": -10.13953,
       "Scale": 1.4000001,
       "Player": 23
     },
@@ -79,7 +79,7 @@
       "PosX": 25.706184,
       "PosY": 0,
       "PosZ": -109.2049,
-      "RotationY": 270,
+      "RotationY": -10.13953,
       "Scale": 1.4000001,
       "Player": 23
     },
@@ -88,7 +88,7 @@
       "PosX": 47.88993,
       "PosY": 0,
       "PosZ": -62.68704,
-      "RotationY": 314.9999,
+      "RotationY": 48.16529,
       "Scale": 1.4000001,
       "Player": 23
     },
@@ -97,7 +97,7 @@
       "PosX": 58.815365,
       "PosY": 0,
       "PosZ": -51.682255,
-      "RotationY": 314.9999,
+      "RotationY": 48.16529,
       "Scale": 1.3000001,
       "Player": 23
     },
@@ -124,7 +124,7 @@
       "PosX": 93.96287,
       "PosY": 0,
       "PosZ": -94.21715,
-      "RotationY": 314.99988,
+      "RotationY": 48.16355,
       "Scale": 4,
       "Player": 1
     },
@@ -133,7 +133,7 @@
       "PosX": 26.152178,
       "PosY": 0,
       "PosZ": -100.98088,
-      "RotationY": 270,
+      "RotationY": -10.13953,
       "Scale": 3.9999986,
       "Player": 0
     },
@@ -151,8 +151,8 @@
       "PosX": 53.21189,
       "PosY": 0,
       "PosZ": -56.777023,
-      "RotationY": 135,
-      "Scale": 3.7999988,
+      "RotationY": 174.93022,
+      "Scale": 3.799999,
       "Player": 1
     },
     {
@@ -187,7 +187,7 @@
       "PosX": -63.93066,
       "PosY": 0,
       "PosZ": 27.047354,
-      "RotationY": 284.99997,
+      "RotationY": 129.29541,
       "Scale": 2.2000003,
       "Player": 0
     },
@@ -196,7 +196,7 @@
       "PosX": -62.827953,
       "PosY": 0,
       "PosZ": 34.631622,
-      "RotationY": 254.99998,
+      "RotationY": -105.00002,
       "Scale": 2.0000002,
       "Player": 0
     },
@@ -250,7 +250,7 @@
       "PosX": -20,
       "PosY": 0,
       "PosZ": 62,
-      "RotationY": 344.99997,
+      "RotationY": -15.000042,
       "Scale": 1.2,
       "Player": 0
     },
@@ -259,7 +259,7 @@
       "PosX": -22,
       "PosY": 0,
       "PosZ": 66,
-      "RotationY": 329.99997,
+      "RotationY": -30.000036,
       "Scale": 1.8000002,
       "Player": 0
     },
@@ -16248,7 +16248,7 @@
       "PosX": -79.545044,
       "PosY": 0,
       "PosZ": -104.45222,
-      "RotationY": -113.98067,
+      "RotationY": -113.98066,
       "Scale": 1.08896
     },
     {
@@ -16592,7 +16592,7 @@
       "PosX": -47.222588,
       "PosY": 0,
       "PosZ": 99.111115,
-      "RotationY": 314.9999,
+      "RotationY": 314.99988,
       "Scale": 0.39999986
     },
     {
@@ -17185,23 +17185,26 @@
       "PosY": 0,
       "PosZ": -68,
       "RotationY": 120,
-      "Scale": 5
+      "Scale": 5,
+      "Level": 1
     },
     {
       "TemplateId": "resource/resource_001",
       "PosX": -8,
       "PosY": 0,
       "PosZ": 70,
-      "RotationY": 314.99997,
-      "Scale": 5
+      "RotationY": 314.99994,
+      "Scale": 5,
+      "Level": 1
     }
   ],
   "Decals": [],
+  "Items": [],
   "Vfx": [],
-  "CameraBoundsLeft": -95,
-  "CameraBoundsRight": 95,
-  "CameraBoundsTop": -95,
-  "CameraBoundsBottom": 125,
+  "CameraBoundsLeft": -128,
+  "CameraBoundsRight": 128,
+  "CameraBoundsTop": -128,
+  "CameraBoundsBottom": 128,
   "SkyboxPath": "Assets/skyboxes/jade_shrine.png",
   "Coordinates": [
     {
@@ -17295,5 +17298,6 @@
       "MaxX": -86,
       "MaxZ": -76
     }
-  ]
+  ],
+  "SpawnAnchors": []
 }
